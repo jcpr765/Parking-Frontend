@@ -1,6 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Hind');
+/*Photo by John Matychuk on Unsplash*/
+/*Photo by Dean Hergert on Unsplash*/
+
 .App{
     text-align: center;
 }
 .App-header{
-    background-color: white; 
+    color: whitesmoke;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.App-title{
+    font-family: 'Abril Fatface', sans-serif;
+}
+
+h2, h3, select{
+    font-family: 'Hind', sans-serif;
+    font-size: 1.5rem;
+}
+
+body{
+    background-image: url("./img/john-matychuk-393455.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.chart-div{
+    background-color:rgba(255,255,255,.6);
+    width: 70%;
+    margin: 0 auto;
 }
