@@ -13,7 +13,7 @@ export class LocationSelector extends React.Component {
     }
 
     handleChange(e){
-        const id = e.target.value;
+        const id = parseInt(e.target.value, 10);
         if(id !== 0){
             const location = this.props.locationList[id-1];
             this.setState({
@@ -33,7 +33,7 @@ export class LocationSelector extends React.Component {
         return(
                 <div>
                     <select onChange={this.handleChange}>
-                        <option value={0}>Choose One</option>
+                        <option value={0} key={0}>Choose One</option>
                         {locationList}
                     </select>
                     <Content locationCapacity={this.state.locationCapacity} locationName={this.state.locationName} locationId={this.state.locationId}/>

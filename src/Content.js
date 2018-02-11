@@ -1,5 +1,7 @@
 import React from 'react';
-import {ChartsContainer} from './Charts/ChartsContainer';
+import {WeekStatsContainer} from './Charts/WeekStatsContainer';
+import {LiveStatsContainer} from './Charts/LiveStatsContainer';
+import {GateStatsContainer} from './Charts/GateStatsContainer';
 
 export const Content = (props) => {
     const locationId = props.locationId;
@@ -7,7 +9,9 @@ export const Content = (props) => {
         return(
             <div>
                 <h2>Showing statistics for {props.locationName}</h2>
-                <ChartsContainer locationCapacity={props.locationCapacity} locationId={locationId}></ChartsContainer>
+                <LiveStatsContainer locationCapacity={props.locationCapacity} locationId={locationId}></LiveStatsContainer>
+                <WeekStatsContainer locationCapacity={props.locationCapacity} locationId={locationId}></WeekStatsContainer>
+                <GateStatsContainer locationCapacity={props.locationCapacity} locationId={locationId}></GateStatsContainer>
             </div>
             
         );

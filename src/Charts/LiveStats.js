@@ -1,7 +1,7 @@
 import React from 'react';
-import {Tooltip, PieChart, Pie, Cell } from 'recharts';
+import {ResponsiveContainer, Tooltip, PieChart, Pie, Cell } from 'recharts';
 
-export class PieChartContainer extends React.Component {
+export class LiveStats extends React.Component {
 
     constructor(props){
         super(props);
@@ -33,23 +33,25 @@ export class PieChartContainer extends React.Component {
     }
 
     render(){
-        const data = this.props.pieData;
+        const data = this.props.liveData;
         const blue = '#0088FE';
         const red = '#f44542';
         return(
             <div className="chart-div">
                 <h3>Live Lot Availability</h3>
-                <PieChart style={this.props.style} width={800} height={400}>
-                <Pie
-                dataKey="value"
-                data={data}
-                label
-                >
-                    <Cell fill={blue}/>
-                    <Cell fill={red}/>
-                </Pie>
-                <Tooltip/>
-            </PieChart>
+                <ResponsiveContainer minHeight={400}>
+                    <PieChart style={this.props.style} width={800} height={400}>
+                        <Pie
+                        dataKey="value"
+                        data={data}
+                        label
+                        >
+                        <Cell fill={blue}/>
+                        <Cell fill={red}/>
+                        </Pie>
+                        <Tooltip/>
+                    </PieChart>
+                </ResponsiveContainer>
             <ul>
                 <li style={this.bulletStyle(blue)}>Taken Spots</li>
                 <li style={this.bulletStyle(red)}>Available Spots</li>

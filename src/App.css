@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Hind');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Hind|Open+Sans:800');
 /*Photo by John Matychuk on Unsplash*/
 /*Photo by Dean Hergert on Unsplash*/
 
@@ -7,16 +7,17 @@
 }
 .App-header{
     color: whitesmoke;
-    text-decoration: underline;
     font-size: 2rem;
 }
 
 .App-title{
-    font-family: 'Abril Fatface', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-shadow: 0 0 3px #000;
 }
 
 h2, h3, select{
-    font-family: 'Hind', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -33,6 +34,6 @@ body{
 
 .chart-div{
     background-color:rgba(255,255,255,.6);
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }

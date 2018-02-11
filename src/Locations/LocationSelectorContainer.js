@@ -18,7 +18,7 @@ export class LocationSelectorContainer extends React.Component {
     }
 
     componentDidMount(){
-        request.get(httpAddress, (err, res, body)=>{
+        request.get(httpAddress + 'locations/', (err, res, body)=>{
             if(!err && (res.statusCode === 200 || res.statusCode === 304)){
                 this.setState({
                     locList: JSON.parse(body)
